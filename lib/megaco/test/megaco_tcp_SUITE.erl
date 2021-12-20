@@ -89,7 +89,7 @@ suite() ->
     [{ct_hooks, [ts_install_cth]}].
 
 all() -> 
-    %% This is a temporary messure to ensure that we can 
+    %% This is a temporary measure to ensure that we can 
     %% test the socket backend without effecting *all*
     %% applications on *all* machines.
     %% This flag is set only for *one* host.

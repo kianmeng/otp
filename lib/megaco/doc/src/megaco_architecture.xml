@@ -46,7 +46,7 @@
     <p>SIP and H.323 are peer-to-peer protocols for call control (valid only 
       for some of the protocols within H.323), or more generally multi-media 
       session protocols. They both operate at a different level (call control) 
-      from Megaco in a decomposed network, and are therefor not aware of 
+      from Megaco in a decomposed network, and are therefore not aware of 
       whether or not Megaco is being used underneath.</p>
     <image file="megaco_sys_arch.gif">
       <icaption>Network architecture</icaption>

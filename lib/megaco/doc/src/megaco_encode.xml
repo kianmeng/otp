@@ -328,7 +328,7 @@
         <p>The Megaco client (user) starts the flex scanner (load the driver).</p>
         <p>When starting the flex scanner a port to the linked in driver is 
           created. This port has to be owned by a process. This process must not
-          die. If it does the port will also terminate. Therefor:</p>
+          die. If it does the port will also terminate. Therefore:</p>
         <p></p>
         <list type="bulleted">
           <item>

@@ -253,7 +253,7 @@ otp7672_msg02() ->
 otp7672(Msg) ->
     case megaco_text_mini_decoder:decode_message([], Msg) of
 	{ok, M} ->
-	    t("mini decode successfull: ~n~p", [M]),
+	    t("mini decode successful: ~n~p", [M]),
 	    ok;
 	Error ->
 	    e("mini decode failed: ~n~p", [Error]),

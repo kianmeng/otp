@@ -452,7 +452,7 @@ handle_exec(start_transport,
 	    error({failed_starting_transport, TM, Crap})
     catch
         C:E:S ->
-	    e("failed starting transport (~w) - catched: "
+	    e("failed starting transport (~w) - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [TM, C, E, S]),
@@ -477,7 +477,7 @@ handle_exec({listen, Opts0, MaybeRetry},
             error({tcp_listen_failed, Opts0, Else})
     catch
         C:E:S ->
-	    e("failed starting transport (~w) - catched: "
+	    e("failed starting transport (~w) - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [C, E, S]),
@@ -498,7 +498,7 @@ handle_exec({listen, Opts0, _MaybeRetry},
             error({udp_open, Opts0, Else})
     catch
         C:E:S ->
-	    e("[listen] failed udp open - catched: "
+	    e("[listen] failed udp open - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [C, E, S]),
@@ -519,7 +519,7 @@ handle_exec({listen, Opts0, _MaybeRetry},
             error({generic_listen, Opts0, Else})
     catch
         C:E:S ->
-	    e("[listen] failed generic - catched: "
+	    e("[listen] failed generic - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [C, E, S]),
@@ -549,7 +549,7 @@ handle_exec({connect, Host, Opts0, MaybeRetry},
 	    error({tcp_connect_failed, Host, Opts0, Error})
     catch
         C:E:S ->
-	    e("tcp connect failed - catched: "
+	    e("tcp connect failed - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [C, E, S]),
@@ -578,7 +578,7 @@ handle_exec({connect, Host, Opts0, _MaybeRetry},
 	    error({udp_connect_failed, Host, Opts0, Error})
     catch
         C:E:S ->
-	    e("udp connect (open) failed - catched: "
+	    e("udp connect (open) failed - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [C, E, S]),
@@ -605,7 +605,7 @@ handle_exec({connect, Host, Opts0, _MaybeRetry},
 	    error({generic_connect_failed, Host, Opts0, Error})
     catch
         C:E:S ->
-	    e("generic connect failed - catched: "
+	    e("generic connect failed - caught: "
 	      "~n   C: ~p"
 	      "~n   E: ~p"
 	      "~n   S: ~p", [C, E, S]),
@@ -699,11 +699,11 @@ handle_exec({megaco_system_info, Tag, Verify},
 	    {error, State#state{result = [Error|AccRes]}}
     catch
         C:E:S ->
-            e("verification failed - catched: "
+            e("verification failed - caught: "
               "~n      C: ~p"
               "~n      E: ~p"
               "~n      S: ~p", [C, E, S]),
-            {error, State#state{result = [{catched, {C, E, S}}|AccRes]}}
+            {error, State#state{result = [{caught, {C, E, S}}|AccRes]}}
     end;
 
 %% This is either a MG or a MGC which is only connected to one MG
@@ -748,11 +748,11 @@ handle_exec({megaco_cast, ARs, Opts}, #state{conn_handle = CH,
             {error, State#state{result = [Error|AccRes]}}
     catch
         C:E:S ->
-            e("failed sending (cast) message - catched: "
+            e("failed sending (cast) message - caught: "
               "~n      C: ~p"
               "~n      E: ~p"
               "~n      S: ~p", [C, E, S]),
-            {error, State#state{result = [{catched, {C, E, S}}|AccRes]}}
+            {error, State#state{result = [{caught, {C, E, S}}|AccRes]}}
     end;
 
 handle_exec({megaco_cast, RemoteMid, ARs, Opts},
@@ -807,7 +807,7 @@ handle_exec({megaco_callback, Tag, Verify}, State) when is_function(Verify) ->
                     validate(VRes, Tag, Res, State)
             catch
                 C:E:S ->
-                    e("megaco callback - verification failed - catched: "
+                    e("megaco callback - verification failed - caught: "
                       "~n      C: ~p"
                       "~n      E: ~p"
                       "~n      S: ~p", [C, E, S]),
@@ -835,7 +835,7 @@ handle_exec({megaco_callback, Tag, {VMod, VFunc, VArgs}}, State)
                     validate(VRes, Tag, Res, State)
             catch
                 C:E:S ->
-                    e("megaco callback - verification failed - catched: "
+                    e("megaco callback - verification failed - caught: "
                       "~n      C: ~p"
                       "~n      E: ~p"
                       "~n      S: ~p", [C, E, S]),
@@ -862,7 +862,7 @@ handle_exec({megaco_callback, Tag, Verify, Timeout},
                     validate(VRes, Tag, Res, State)
             catch
                 C:E:S ->
-                    e("megaco callback - verification failed - catched: "
+                    e("megaco callback - verification failed - caught: "
                       "~n      C: ~p"
                       "~n      E: ~p"
                       "~n      S: ~p", [C, E, S]),

@@ -373,7 +373,7 @@ config(Config) when is_list(Config) ->
 	 EvilCmd(Mid, 30, encoding_mod, {non_atom}), 
 	 EvilCmd(Mid, 31, encoding_config, non_list), 
 	 EvilCmd(Mid, 32, protocol_version, NonInt),
-	 EvilCmd(Mid, 33, resend_indication, flagg),
+	 EvilCmd(Mid, 33, resend_indication, flag),
 
 
 	 %% End 

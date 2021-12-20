@@ -27,7 +27,7 @@
 %% 
 %%----------------------------------------------------------------------
 %% Purpose: mstone 2 measurement
-%%          This module implement a simple performence measurment case.
+%%          This module implement a simple performance measurement case.
 %%          The architecture is as followes:
 %%          - One loader process: 
 %%            It keeps a list of all codec combinations, including

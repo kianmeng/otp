@@ -214,7 +214,7 @@ message() = binary()
 
         <p>This file can be <c>exported</c> to a file structure by calling the 
           <seeerl marker="megaco_codec_transform#export_messages">export_messages</seeerl>
-          function. This can be usefull if a measurement shall be done with
+          function. This can be useful if a measurement shall be done with
           an external tool. Exporting the messages creates a directory tree 
           with the following structure:
           </p>
@@ -244,7 +244,7 @@ message() = binary()
         <p>Furthermore, it is possible to make use of a linked in driver that 
           performs some of the decode/encode, decode for ber and encode for per 
           (the 'driver' encoding config).</p>
-        <p>Therefor in the tests, binary codecs are tested with four 
+        <p>Therefore in the tests, binary codecs are tested with four 
           different encoding configs to determine exactly how the
           different options effect the performance: with transformation and 
           without driver ([]), without transformation and without driver 

@@ -41,7 +41,7 @@
 %%----------------------------------------------------------------------
 %% Connection handle
 %%
-%% The connecion handle provides a locally unique identity of a
+%% The connection handle provides a locally unique identity of a
 %% connection. It is generated when a connection is established.
 %%----------------------------------------------------------------------
 
@@ -92,7 +92,7 @@
 %% contains_wildcards() -> true | false
 %%
 %% The id field contains all info about the termination id, while the
-%% presense of the contains_wildcards field is just as a matter of
+%% presence of the contains_wildcards field is just as a matter of
 %% convenience in order to make it simple to determine whether a
 %% simple id lookup will suffice or if some more complicated matching
 %% algorithm is needed.

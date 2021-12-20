@@ -711,7 +711,7 @@
       <list type="bulleted">
         <item>
 	  <p>The transaction id counter could be incorrectly
-            updated at wrap-around. The risk was expecially high 
+            updated at wrap-around. The risk was especially high 
             at high load. </p>
 	  <p>Own Id: OTP-7303</p>
 	  <p>Aux Id: Seq 10939</p>
@@ -828,7 +828,7 @@
 
       <list type="bulleted">
         <item>
-          <p>Updated the graphs of the performace chapter with
+          <p>Updated the graphs of the performance chapter with
             to reflect this version of megaco. Also included
             results with HiPE-compiled codec's..</p>
           <p>Own Id: OTP-7180</p>
@@ -857,7 +857,7 @@
         </item>
 
         <item>
-          <p>It was possible to create permenant pending counter
+          <p>It was possible to create permanent pending counter
             data for a somewhat misbehaving (request) receiver.
             If a megaco entity ("sender") sends a request and the
             "receiver" (of the request) responds with a pending
@@ -945,7 +945,7 @@
         <item>
           <p>There is a race condition when cancelling requests
             during a high load situations which could lead to
-            spurious (megaco internal) messages beeing sent to
+            spurious (megaco internal) messages being sent to
             user processes. When a request is issued using
             <seeerl marker="megaco#call">megaco:call</seeerl>, 
             which returns only after a "reply" can
@@ -963,7 +963,7 @@
 
         <item>
           <p>[text] Decoding a version 2 message with an observedEventParameter
-             where the value of the parmValue was CT, failes. 
+             where the value of the parmValue was CT, fails. 
              CT is defined as the context attribute token in version 3,
              and this incorrectly caused the scanner (which is version 
              agnostic) to create an ContextAttrToken, which caused the 
@@ -1022,7 +1022,7 @@
         </item>
 
         <item>
-          <p>Use of depricated function erlang:fault replaced with 
+          <p>Use of deprecated function erlang:fault replaced with 
             erlang:error.</p>
           <p>Own Id: OTP-6919</p>
         </item>
@@ -1144,7 +1144,7 @@
 
 <!--
         <item>
-          <p>Use of depricated function erlang:fault replaced by
+          <p>Use of deprecated function erlang:fault replaced by
             erlang:error. </p>
           <p>Own Id: OTP-6919</p>
         </item>
@@ -1904,7 +1904,7 @@
           <p>Aux Id: Seq 10308</p>
         </item>
         <item>
-          <p>Bad formated debug printout in transaction sender.</p>
+          <p>Bad formatted debug printout in transaction sender.</p>
           <p>Own Id: OTP-6089</p>
         </item>
       </list>
@@ -2488,7 +2488,7 @@
       <title>Incompatibilities</title>
       <list type="bulleted">
         <item>
-          <p>The (successfull) return value from the 
+          <p>The (successful) return value from the 
             <seeerl marker="megaco#test_digit_event">test_digit_event</seeerl> and 
             <seeerl marker="megaco#eval_digit_map">eval_digit_map</seeerl> 
             has been changed.</p>

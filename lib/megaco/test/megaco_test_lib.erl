@@ -357,7 +357,7 @@ display_system_info(WhenStr, ModFuncStr) ->
 
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Verify that the actual result of a test case matches the exected one
+%% Verify that the actual result of a test case matches the expected one
 %% Returns the actual result
 %% Stores the result in the process dictionary if mismatch
 
@@ -544,7 +544,7 @@ maybe_skip(_HostInfo) ->
            (V) when (V =:= {2,6,16}) ->
                 case string:trim(os:cmd("cat /etc/issue")) of
                     %% Stone age SLES => Skip
-                    %% We have atleast one VM that has this version,
+                    %% We have at least one VM that has this version,
                     %% and it causes randome timeout glitches...
                     "Welcome to SUSE Linux Enterprise Server 10 SP1 " ++ _ ->
                         true;
@@ -654,7 +654,7 @@ end_per_testcase(_Case, Config) ->
     reset_kill_timer(Config).
 
 
-%% This function prints various host info, which might be usefull
+%% This function prints various host info, which might be useful
 %% when analyzing the test suite (results).
 %% It also returns a "factor" that can be used when deciding 
 %% the load for some test cases. Such as run time or number of

@@ -81,7 +81,7 @@ suite() ->
     [{ct_hooks, [ts_install_cth]}].
 
 all() -> 
-    %% This is a temporary messure to ensure that we can 
+    %% This is a temporary measure to ensure that we can 
     %% test the socket backend without effecting *all*
     %% applications on *all* machines.
     %% This flag is set only for *one* host.
@@ -1124,7 +1124,7 @@ server_open(Config, #{transport_ref := Ref} = State, Options)
 	    ERROR
     catch
         C:E:S ->
-            {error, {catched, C, E, S}}
+            {error, {caught, C, E, S}}
     end.
 
 server_notify_operational(#{parent := Parent} = State) ->
@@ -1239,7 +1239,7 @@ client_open(Config, #{transport_ref := Ref} = State, Options)
 	    ERROR
     catch
         C:E:S ->
-            {error, {catched, C, E, S}}
+            {error, {caught, C, E, S}}
     end.
 
 client_await_continue_signal(#{parent := Parent} = State, Timeout) ->

@@ -386,10 +386,10 @@ handle_exec({expect_receive, Desc, {Verify, To}},
             d("expect_receive -> received message: Length = ~p", [Length]),
             case (catch Decode(Msg)) of
                 {ok, MegaMsg} when is_tuple(MegaMsg) ->
-                    d("expect_receive -> decode successfull, now verify"),
+                    d("expect_receive -> decode successful, now verify"),
                     case (catch Verify(MegaMsg)) of
                         {ok, Res} ->
-                            d("expect_receive -> verify successfull"),
+                            d("expect_receive -> verify successful"),
                             {ok, State#state{result = [Res|Acc]}};
                         Else ->
                             e("failed to verify message: ~n~p~n~p",

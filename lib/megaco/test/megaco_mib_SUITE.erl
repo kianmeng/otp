@@ -472,7 +472,7 @@ do_traffic([MgcNode, Mg1Node, Mg2Node, Mg3Node, Mg4Node]) ->
     ok = traffic_apply_load(MgConf),
 
     %% Await completion of load part and the collect traffic
-    i("traffic -> await load (1) competion"),
+    i("traffic -> await load (1) completion"),
     progress("await load (1) completion"),
     ok = traffic_await_load_complete(MgConf),
 
@@ -523,7 +523,7 @@ do_traffic([MgcNode, Mg1Node, Mg2Node, Mg3Node, Mg4Node]) ->
     ok = traffic_apply_load(MgConf),
 
     %% Await completion of load part and the collect traffic
-    i("traffic -> await load (2) competion"),
+    i("traffic -> await load (2) completion"),
     progress("await load (2) completion"),
     ok = traffic_await_load_complete(MgConf),
 
@@ -1412,7 +1412,7 @@ mg_start_udp(MgcPort, RH) ->
 	{ok, Sup} ->
             %% Some linux (Ubuntu) has "crap" in their /etc/hosts, that 
             %% causes problem for us in this case (UDP). So we can't use
-            %% local host. Try instead to "figure out" tha actual address...
+            %% local host. Try instead to "figure out" the actual address...
             LocalAddr = which_local_addr(),
 	    Opts = [{port, 0}, {receive_handle, RH}],
             i("udp transport started: attempt (udp) open"),

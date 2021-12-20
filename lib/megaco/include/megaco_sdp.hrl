@@ -22,7 +22,7 @@
 %%
 %%
 %% Explanaition of the fields in the SDP body
-%%   (See RFC 4566 for the complete decription)
+%%   (See RFC 4566 for the complete description)
 %%
 %% Session descriptions
 %%

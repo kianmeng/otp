@@ -1283,7 +1283,7 @@ compact_otp4085_2(Msg, Conf) ->
     megaco_codec_test_lib:expect_decode_only(Msg, Decode, Check).
 
 
-%% This message lack the ending parentesis (}).
+%% This message lack the ending parenthesis (}).
 compact_otp4085_erroneous_msg() ->
     M = "!/"
 	?VERSION_STR
@@ -8171,7 +8171,7 @@ ticket_pretty_encode_error(Msg, Conf, Check) when is_function(Check) ->
     ticket_encode_error(Msg, Codec, Conf, Check).
 
 ticket_encode_error(Msg, Codec, Conf) when is_list(Conf) ->
-    Check = fun(_) -> ok end, % Only called when encode failes
+    Check = fun(_) -> ok end, % Only called when encode fails
     ticket_encode_error(Msg, Codec, Conf, Check).
 
 ticket_encode_error(Msg, Codec, Conf0, Check) ->
@@ -8298,7 +8298,7 @@ ticket_decode_error(Msg, Codec, Conf) ->
     Check = fun(X) ->
 		    d("decode error reason: ~n~p~n", [X]),
 		    ok
-	    end, % Only called when decode failes
+	    end, % Only called when decode fails
     ticket_decode_error(Msg, Codec, Conf, Check).
 
 ticket_decode_error(Msg, Codec, Conf0, Check) ->

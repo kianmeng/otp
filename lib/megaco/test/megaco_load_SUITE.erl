@@ -92,7 +92,7 @@ suite() ->
     [{ct_hooks, [ts_install_cth]}].
 
 all() -> 
-    %% This is a temporary messure to ensure that we can 
+    %% This is a temporary measure to ensure that we can 
     %% test the socket backend without effecting *all*
     %% applications on *all* machines.
     %% This flag is set only for *one* host.
@@ -498,7 +498,7 @@ do_single_user_load(SCO,
 	{Time, {ok, Ok, Err}} ->
 	    Sec = Time / 1000000,
 	    io:format("~nmultiple loaders result: ~n"
-		      "   Number of successfull: ~w~n"
+		      "   Number of successful: ~w~n"
 		      "   Number of failure:     ~w~n"
 		      "   Time:                  ~w seconds~n"
 		      "   Calls / seconds        ~w~n~n", 
@@ -742,12 +742,12 @@ await_multi_load_collectors(Pids, Oks, Errs) ->
 	    
 		
 %% Note that this is an approximation...we run all the
-%% MGs in parrallel, so it should be "accurate"...
+%% MGs in parallel, so it should be "accurate"...
 multi_load_collector_calc(Sec, Oks) ->
     Succs = lists:sum([Ok   || {_, Ok,   _} <- Oks]),
     Fails = lists:sum([Err  || {_,  _, Err} <- Oks]),
     io:format("~ntotal multiple loaders result: ~n"
-	      "   Number of successfull: ~w~n"
+	      "   Number of successful: ~w~n"
 	      "   Number of failure:     ~w~n"
 	      "   Total Calls / seconds: ~.2f~n~n", 
 	      [Succs, Fails, Sec]),

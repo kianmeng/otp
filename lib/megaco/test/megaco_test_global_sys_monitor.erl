@@ -199,7 +199,7 @@ cast(Msg) ->
             ok
     catch
         C:E:_ ->
-            {error, {catched, C, E}}
+            {error, {caught, C, E}}
     end.
 
 call(Req) ->
@@ -217,7 +217,7 @@ call(Req, Timeout) ->
             end
     catch
         C:E:_ ->
-            {error, {catched, C, E}}
+            {error, {caught, C, E}}
     end.
 
 

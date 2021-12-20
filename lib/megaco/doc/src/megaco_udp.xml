@@ -192,7 +192,7 @@
         <v>Reason = term()</v>
       </type>
       <desc>
-        <p>Retreive the UDP related (SNMP) statistics counters.</p>
+        <p>Retrieve the UDP related (SNMP) statistics counters.</p>
       </desc>
     </func>
     <func>

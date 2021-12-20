@@ -297,7 +297,7 @@ handle_transport(Pid, Event, SendHandle, Info) ->
     end.
 
 
-%% This function is used to simulate incomming messages
+%% This function is used to simulate incoming messages
 handle_incomming_message(Msg, 
 			 #megaco_receive_handle{encoding_mod    = EM,
 						encoding_config = EC} = RH) ->

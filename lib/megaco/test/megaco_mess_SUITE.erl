@@ -7193,7 +7193,7 @@ dist(Config) when is_list(Config) ->
     ?USER({request, MgCH, _V, [[Req]]}, {discard_ack, [Rep]}),
     ?RECEIVE([{res, _, {1, {ok, [Rep]}}}]),
 
-    d("dist -> retreive some info",[]),
+    d("dist -> retrieve some info",[]),
     connections([MgCH, MgcCH]),
     ?VERIFY([MgCH], megaco:user_info(MgMid, connections)),
     ?VERIFY([MgcCH], megaco:user_info(MgcMid, connections)),
@@ -7248,7 +7248,7 @@ otp_4359(Config) when is_list(Config) ->
     ?VERIFY(ok, megaco:update_user_info(Mid, user_mod,  ?MODULE)),
     io:format("otp_4359 -> update user info: user_args -> ~p~n", [self()]),
     ?VERIFY(ok, megaco:update_user_info(Mid, user_args, [self()])),
-    io:format("otp_4359 -> retreive receive_handle~n", []),
+    io:format("otp_4359 -> retrieve receive_handle~n", []),
     RH0 = user_info(Mid, receive_handle),
     io:format("otp_4359 -> RH0: ~p~n", [RH0]),
     RH1 = RH0#megaco_receive_handle{send_mod        = ?MODULE,
@@ -7261,7 +7261,7 @@ otp_4359(Config) when is_list(Config) ->
 	"T={C=${A=${M{O {MO=SR,RG=OFF,RV=OFF}}}}}"
 	"T=1{C=${A=${M{O {MO=SR,RG=OFF,RV=OFF}}}}}",
 
-    %% Simulate incomming message
+    %% Simulate incoming message
     %% Will result in an (auto) connect first
     io:format("otp_4359 -> simulate receive message~n", []),
     megaco:receive_message(RH1, self(), self(), list_to_binary(M)),
@@ -9197,7 +9197,7 @@ otp_6275_msg(Mid, TransId, AR) ->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% This test case can only be run with the stack compiled with
-%% the MEGACO_TEST_CODE flag. Therefor there is no point in
+%% the MEGACO_TEST_CODE flag. Therefore there is no point in
 %% including this test case in the usual test suite
 -ifdef(MEGACO_TEST_CODE).
 otp_6276(suite) ->
@@ -13735,7 +13735,7 @@ otp_8212(Config) when is_list(Config) ->
     SendHandle = {RH, ControlPid, RemoteMidStr1, RemoteMidStr2}, 
     ?VERIFY({ok, _}, megaco:connect(RH, NoMid, SendHandle, ControlPid)),
     
-    d("simulate incomming service change message from ~p", 
+    d("simulate incoming service change message from ~p", 
       [RemoteMidStr1]),
     ?VERIFY(ok, 
 	    megaco:process_received_message(RH, ControlPid, 

@@ -238,7 +238,7 @@ do_decode(Mod, Conf, Bin) ->
 	    S = format("decode exit: ~p", [Reason]),
 	    throw({error, S});
 	Other ->
-	    S = format("unknwon decode result: ~p", [Other]),
+	    S = format("unknown decode result: ~p", [Other]),
 	    throw({error, S})
     end.
 
@@ -279,7 +279,7 @@ do_encode(Mod, Conf, Msg) ->
 	    S = format("encode exit: ~p", [Reason]),
 	    throw({error, S});
 	Other ->
-	    S = format("unknwon encode result: ~p", [Other]),
+	    S = format("unknown encode result: ~p", [Other]),
 	    throw({error, S})
     end.
 

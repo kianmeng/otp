@@ -506,7 +506,7 @@ sent_timer_exceeded_long(Config) when is_list(Config) ->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% This test case can only be run with the stack compiled with
-%% the MEGACO_TEST_CODE flag. Therefor there is no point in 
+%% the MEGACO_TEST_CODE flag. Therefore there is no point in 
 %% including this test case in the usual test suite
 -ifdef(MEGACO_TEST_CODE).
 sent_resend_late_reply(suite) ->
@@ -610,7 +610,7 @@ sent_resend_late_reply(Config) when is_list(Config) ->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% This test case can only be run with the stack compiled with
-%% the MEGACO_TEST_CODE flag. Therefor there is no point in 
+%% the MEGACO_TEST_CODE flag. Therefore there is no point in 
 %% including this test case in the usual test suite
 -ifdef(MEGACO_TEST_CODE).
 sent_resend_exceeded(suite) ->
@@ -709,7 +709,7 @@ sent_resend_exceeded(Config) when is_list(Config) ->
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% This test case can only be run with the stack compiled with
-%% the MEGACO_TEST_CODE flag. Therefor there is no point in 
+%% the MEGACO_TEST_CODE flag. Therefore there is no point in 
 %% including this test case in the usual test suite
 -ifdef(MEGACO_TEST_CODE).
 sent_resend_exceeded_long(suite) ->

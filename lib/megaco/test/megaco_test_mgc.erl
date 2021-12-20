@@ -1018,7 +1018,7 @@ handle_cmd_request(CH, PV, CtxId,
 
         _ ->
             Code = ?megaco_not_implemented,
-            ED   = cre_error_descr(Code,"Unknown command requst received:"
+            ED   = cre_error_descr(Code,"Unknown command request received:"
                                    "~n   Tag: ~p~n   Req: ~p",[Tag,Req]),
             throw(ED)
     end.

@@ -351,7 +351,7 @@ start_mgc(Proxy) ->
 			   Res
 		   catch
 		       C:E:S ->
-			   {error, {{catched, C, E, S}}, code:get_path()}
+			   {error, {{caught, C, E, S}}, code:get_path()}
 		   end
 	   end),
     receive
@@ -371,7 +371,7 @@ start_mg(Proxy) ->
 				  Res
 			  catch
 			      C:E:S ->
-				  {error, {{catched, C, E, S}}, code:get_path()}
+				  {error, {{caught, C, E, S}}, code:get_path()}
 			  end
 		  end),
     receive

@@ -321,7 +321,7 @@ measure(_Dir, _Codec, _Conf, [], Res, _MCount) ->
     Davg = avg([Dtime/Dcnt || #stat{dcount = Dcnt, dtime = Dtime} <- Res]),
     Savg = avg([Size       || #stat{size = Size} <- Res]),
 
-    io:format("~n  Measurment on ~p messages:"
+    io:format("~n  Measurement on ~p messages:"
 	      "~n  Average size:   ~w bytes, "
 	      "~n          encode: ~w microsec, "
 	      "~n          decode: ~w microsec~n~n", 
@@ -434,10 +434,10 @@ do_measure_codec(Parent, Codec, Func, Conf, Version, Bin, MCount) ->
     unlink(Parent). % Make sure Parent don't get our exit signal
 
 
-%% This function does more mor less what the real measure function
+%% This function does more more less what the real measure function
 %% above does. But with the diff:
 %% 1) Warmup to ensure that all used code are loaded
-%% 2) To aproximate the encoding time, to ensure that 
+%% 2) To approximate the encoding time, to ensure that 
 %%    the real encode is done with enough iterations.
 measure_warmup(Codec, Func, Conf, Version, M, MCount) ->
     Res = timer:tc(?MODULE, do_measure_codec_loop, 

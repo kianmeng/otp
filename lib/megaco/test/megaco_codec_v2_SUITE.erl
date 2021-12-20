@@ -886,7 +886,7 @@ flex_pretty_otp5042_msg1(Config) when is_list(Config) ->
 		    exit({unexpected_decode_result, Reason})
 	    end;
 	{ok, M} ->
-	    t("flex_pretty_otp5042_msg1 -> successfull decode:"
+	    t("flex_pretty_otp5042_msg1 -> successful decode:"
 	      "~n~p", [M]),
 	    ok
     end.
@@ -1675,7 +1675,7 @@ compact_otp4085_msg2(Config) when is_list(Config) ->
     Bin = list_to_binary(M1),
     case decode_message(megaco_compact_text_encoder, false, [], Bin) of
 	{ok, M2} ->
-	    l("compact_otp4085_msg1 -> successfull decode"
+	    l("compact_otp4085_msg1 -> successful decode"
 	      "~n   M2: ~p", [M2]),
 	    ok;
 	Else ->
@@ -1685,7 +1685,7 @@ compact_otp4085_msg2(Config) when is_list(Config) ->
     end.
 
 
-%% This message lack the ending parentesis (}).
+%% This message lack the ending parenthesis (}).
 compact_otp4085_erroneous_msg() ->
     M = "!/"
 	?VERSION_STR
@@ -2015,7 +2015,7 @@ compact_otp4920_msg_2(M1, ExpectedReason) ->
     Bin = list_to_binary(M1),
     case decode_message(megaco_compact_text_encoder, false, [], Bin) of
 	{ok, Msg} ->
-	    io:format("unexpected successfull decode", []),
+	    io:format("unexpected successful decode", []),
 	    exit({unexpected_encode_ok, Msg});
 	{error, [{reason, {__Line, _Mod, Reason}}|_]} ->
 	    case element(1, Reason) of
@@ -2868,11 +2868,11 @@ compact_otp7138(EC, BinMsg) ->
 	{ok, Msg} ->
 	    case encode_message(Codec, EC, Msg) of
 		{ok, BinMsg} ->
-		    d("compact_otp7138 -> encode successfull: "
+		    d("compact_otp7138 -> encode successful: "
 		      "~n   ~p", [binary_to_list(BinMsg)]),
 		    ok;
 		{ok, BinMsg2} ->
-		    d("compact_otp7138 -> encode successfull but result differ: "
+		    d("compact_otp7138 -> encode successful but result differ: "
 		      "~n   ~p", [binary_to_list(BinMsg2)]),
 		    ok;
 		{error, Reason} ->
@@ -2938,12 +2938,12 @@ compact_otp7457(EC, BinMsg) ->
 	{ok, Msg} ->
 	    case encode_message(Codec, EC, Msg) of
 		{ok, BinMsg} ->
-		    d("compact_otp7457 -> encode successfull: "
+		    d("compact_otp7457 -> encode successful: "
 		      "~n   ~p", [binary_to_list(BinMsg)]),
 		    ok;
 		{ok, BinMsg2} ->
 		    d("compact_otp7457 -> "
-		      "encode successfull but result differ: "
+		      "encode successful but result differ: "
 		      "~n   ~p", [binary_to_list(BinMsg2)]),
 		    ok;
 		{error, Reason} ->
@@ -3009,11 +3009,11 @@ compact_otp7576(EC, BinMsg) ->
 	{ok, Msg} ->
 	    case encode_message(Codec, EC, Msg) of
 		{ok, BinMsg} ->
-		    d("compact_otp7138 -> encode successfull: "
+		    d("compact_otp7138 -> encode successful: "
 		      "~n   ~p", [binary_to_list(BinMsg)]),
 		    ok;
 		{ok, BinMsg2} ->
-		    d("compact_otp7138 -> encode successfull but result differ: "
+		    d("compact_otp7138 -> encode successful but result differ: "
 		      "~n   ~p", [binary_to_list(BinMsg2)]),
                     case decode_message(Codec, false, EC, BinMsg2) of
 			{ok, Msg} ->
@@ -3620,12 +3620,12 @@ otp7534(Codec, EC, BinMsg) ->
 	{ok, Msg} ->
 	    case encode_message(Codec, EC, Msg) of
 		{ok, BinMsg} ->
-		    d("otp7457 -> encode successfull: "
+		    d("otp7457 -> encode successful: "
 		      "~n   ~p", [binary_to_list(BinMsg)]),
 		    ok;
 		{ok, BinMsg2} ->
 		    d("otp7457 -> "
-		      "encode successfull but result differ: "
+		      "encode successful but result differ: "
 		      "~n   ~p", [binary_to_list(BinMsg2)]),
 		    ok;
 		{error, Reason} ->
@@ -3663,12 +3663,12 @@ otp7573(Codec, EC, BinMsg) ->
 	{ok, Msg} ->
 	    case encode_message(Codec, EC, Msg) of
 		{ok, BinMsg} ->
-		    d("otp7573 -> encode successfull: "
+		    d("otp7573 -> encode successful: "
 		      "~n   ~p", [binary_to_list(BinMsg)]),
 		    ok;
 		{ok, BinMsg2} ->
 		    d("otp7573 -> "
-		      "encode successfull but result differ: "
+		      "encode successful but result differ: "
 		      "~n   ~p", [binary_to_list(BinMsg2)]),
 		    ok;
 		{error, Reason} ->
@@ -4993,7 +4993,7 @@ pretty_otp5042_msg1(Config) when is_list(Config) ->
 		    exit({unexpected_decode_result, Reason})
 	    end;
 	{ok, M} ->
-	    t("pretty_otp5042_msg1 -> successfull decode:"
+	    t("pretty_otp5042_msg1 -> successful decode:"
 	      "~n~p", [M]),
 	    ok
     end.
@@ -5022,7 +5022,7 @@ pretty_otp5068_msg1(Config) when is_list(Config) ->
 % 		      "~n", [Reason]),
 	    exit({unexpected_encode_result, Reason});
 	{ok, Bin} ->
-% 	    io:format("pretty_otp5068_msg1 -> successfull encode:"
+% 	    io:format("pretty_otp5068_msg1 -> successful encode:"
 % 		      "~n~s~n", [binary_to_list(Bin)]),
 	    case decode_message(megaco_pretty_text_encoder, false, [], Bin) of
 		{ok, _} ->
@@ -5131,18 +5131,18 @@ pretty_otp5085(Expected, Msg, Conf) ->
 	      "~n   Reason: ~w", [Reason]),
 	    exit({unexpected_encode_result, Reason});
 	{ok, Bin} when Expected == error ->
- 	    e("pretty_otp5085 -> encode succeded unexpectedly: "
+ 	    e("pretty_otp5085 -> encode succeeded unexpectedly: "
 	      "~n   ~w", [binary_to_list(Bin)]),
 	    exit({unexpected_encode_result, binary_to_list(Bin)});
 	{ok, Bin} ->
-	    d("pretty_otp5085 -> successfull encode as expected:"
+	    d("pretty_otp5085 -> successful encode as expected:"
 	      "~n~s", [binary_to_list(Bin)]),
 	    case decode_message(megaco_pretty_text_encoder, false, Conf, Bin) of
 		{ok, Msg} ->
- 		    d("pretty_otp5085 -> successfull decode~n", []),
+ 		    d("pretty_otp5085 -> successful decode~n", []),
 		    ok;
 		{ok, Msg2} ->
- 		    e("pretty_otp5085 -> successfull decode"
+ 		    e("pretty_otp5085 -> successful decode"
 		      " - but not equal", []),
 		    exit({unexpected_decode_result, Msg, Msg2});
 		Else ->
@@ -5380,18 +5380,18 @@ pretty_otp5600(Expected, Msg, Conf) ->
 	      "~n   Reason: ~w", [Reason]),
 	    exit({unexpected_encode_result, Reason});
 	{ok, Bin} when Expected == error ->
- 	    e("pretty_otp5600 -> encode succeded unexpectedly: "
+ 	    e("pretty_otp5600 -> encode succeeded unexpectedly: "
 	      "~n   ~w", [binary_to_list(Bin)]),
 	    exit({unexpected_encode_result, binary_to_list(Bin)});
 	{ok, Bin} ->
-	    d("pretty_otp5600 -> successfull encode as expected:"
+	    d("pretty_otp5600 -> successful encode as expected:"
 	      "~n~s", [binary_to_list(Bin)]),
 	    case decode_message(megaco_pretty_text_encoder, false, Conf, Bin) of
 		{ok, Msg} ->
- 		    d("pretty_otp5600 -> successfull decode~n", []),
+ 		    d("pretty_otp5600 -> successful decode~n", []),
 		    ok;
 		{ok, Msg2} ->
- 		    e("pretty_otp5600 -> successfull decode"
+ 		    e("pretty_otp5600 -> successful decode"
 		      " - but not equal", []),
 		    exit({unexpected_decode_result, Msg, Msg2});
 		Else ->
@@ -5503,18 +5503,18 @@ pretty_otp5601(Expected, Msg, Conf) ->
 	      "~n   Reason: ~w", [Reason]),
 	    exit({unexpected_encode_result, Reason});
 	{ok, Bin} when Expected == error ->
- 	    e("pretty_otp5601 -> encode succeded unexpectedly: "
+ 	    e("pretty_otp5601 -> encode succeeded unexpectedly: "
 	      "~n   ~w", [binary_to_list(Bin)]),
 	    exit({unexpected_encode_result, binary_to_list(Bin)});
 	{ok, Bin} ->
-	    d("pretty_otp5601 -> successfull encode as expected:"
+	    d("pretty_otp5601 -> successful encode as expected:"
 	      "~n~s", [binary_to_list(Bin)]),
 	    case decode_message(megaco_pretty_text_encoder, false, Conf, Bin) of
 		{ok, Msg} ->
- 		    d("pretty_otp5601 -> successfull decode~n", []),
+ 		    d("pretty_otp5601 -> successful decode~n", []),
 		    ok;
 		{ok, Msg2} ->
- 		    e("pretty_otp5601 -> successfull decode"
+ 		    e("pretty_otp5601 -> successful decode"
 		      " - but not equal", []),
 		    exit({unexpected_decode_result, Msg, Msg2});
 		Else ->
@@ -6085,18 +6085,18 @@ expect_codec(Expect, Codec, Msg, Conf) ->
 	      "~n   Reason: ~w", [Reason]),
 	    exit({unexpected_encode_result, Reason});
 	{ok, Bin} when Expect == error ->
- 	    e("expect_codec -> encode succeded unexpectedly: "
+ 	    e("expect_codec -> encode succeeded unexpectedly: "
 	      "~n   ~w", [binary_to_list(Bin)]),
 	    exit({unexpected_encode_result, binary_to_list(Bin)});
 	{ok, Bin} ->
-	    d("expect_codec -> successfull encode as expected:"
+	    d("expect_codec -> successful encode as expected:"
 	      "~n~s", [binary_to_list(Bin)]),
 	    case (catch decode_message(Codec, false, Conf, Bin)) of
 		{ok, Msg} ->
- 		    d("expect_codec -> successfull decode~n", []),
+ 		    d("expect_codec -> successful decode~n", []),
 		    ok;
 		{ok, Msg2} ->
- 		    e("expect_codec -> successfull decode"
+ 		    e("expect_codec -> successful decode"
 		      " - but not equal", []),
 		    chk_MegacoMessage(Msg, Msg2);
 		%% exit({unexpected_decode_result, Msg, Msg2});

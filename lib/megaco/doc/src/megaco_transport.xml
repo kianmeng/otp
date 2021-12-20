@@ -75,7 +75,7 @@
           </p>
         <p>In the case of requests, megaco will cancel the message in much 
           the same way as if <c><![CDATA[megaco:cancel]]></c> had been called 
-          (after a successfull send). The information will be propagated
+          (after a successful send). The information will be propagated
           back to the user differently depending on how the request(s) where
           issued: For requests issued using 
           <seeerl marker="megaco#call">megaco:call</seeerl>, the info
@@ -122,7 +122,7 @@
           message was sent. </p>
         <p>In the case of requests, megaco will cancel the message in much 
           the same way as if <c><![CDATA[megaco:cancel]]></c> had been called 
-          (after a successfull send). The information will be propagated
+          (after a successful send). The information will be propagated
           back to the user differently depending on how the request(s) where
           issued: For requests issued using 
           <seeerl marker="megaco#call">megaco:call</seeerl>, the info

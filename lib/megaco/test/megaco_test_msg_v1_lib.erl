@@ -4061,7 +4061,7 @@ is_EventName(N) -> is_PkgdName(N).
 is_EventParameter(#'EventParameter'{eventParameterName = Name,
 				    value              = Val,
 				    extraInfo          = EI}) ->
-    d("is_EventParameter -> entery with"
+    d("is_EventParameter -> entry with"
       "~n   Name: ~p"
       "~n   Val:  ~p"
       "~n   EI:   ~p", [Name, Val, EI]),

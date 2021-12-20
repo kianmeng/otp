@@ -105,7 +105,7 @@ AC_ARG_ENABLE(megaco_reentrant_flex_scanner,
 
 
 dnl
-dnl flex is needed by megaco. lex wont do!
+dnl flex is needed by megaco. lex won't do!
 dnl
 
 AC_PROG_LEX([noyywrap])

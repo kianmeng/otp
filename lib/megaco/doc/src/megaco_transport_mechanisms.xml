@@ -44,7 +44,7 @@
       </item>
       <item>
         <p><c><![CDATA[block]]></c> - Block the transport. <em>Optional</em></p>
-        <p>This function is usefull for flow control.</p>
+        <p>This function is useful for flow control.</p>
       </item>
       <item>
         <p><c><![CDATA[unblock]]></c> - Unblock the transport. <em>Optional</em></p>

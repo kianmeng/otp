@@ -583,7 +583,7 @@
 	<item>
           <p>Buffer overrun error while flex scanner processing
 	  property parm groups. </p>
-          <p>This error occured only for large messages if a
+          <p>This error occurred only for large messages if a
 	  buffer realloc was needed while processing the
 	  property parm groups. </p>
           <p>Own Id: OTP-10998</p>
@@ -1194,7 +1194,7 @@
         <item>
           <p>Callbacks, when the callback module is unknown (undefined),
             results in warning messages. </p>
-          <p>A race condition scenario. As part of a cancelation operation,
+          <p>A race condition scenario. As part of a cancellation operation,
             replies with waiting acknowledgements is cancelled. This includes
             informing the user (via a call to the handle_trans_ack callback
             function). It is possible that at this point the connection data
@@ -1202,7 +1202,7 @@
             perform this operation, resulting in the warning message. The
             solution is to also store the callback module with the other
             reply information, to be used when cleaning up after a
-            cancelation. </p>
+            cancellation. </p>
           <p>Own Id: OTP-8328</p>
 	  <p>Aux Id: Seq 11384</p>
         </item>

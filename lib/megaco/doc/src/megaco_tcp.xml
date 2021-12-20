@@ -187,7 +187,7 @@
         <v>Reason = term()</v>
       </type>
       <desc>
-        <p>Retreive the TCP related (SNMP) statistics counters.</p>
+        <p>Retrieve the TCP related (SNMP) statistics counters.</p>
       </desc>
     </func>
     <func>
