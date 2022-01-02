@@ -273,7 +273,7 @@
             <p>For a local <c>{Date1, Time1}</c> during the period that
               is skipped when switching <em>to</em> daylight saving
               time, there is no corresponding UTC, as the local time
-              is illegal (it has never occured).</p>
+              is illegal (it has never occurred).</p>
           </item>
           <tag><c>[DstDateTimeUTC, DateTimeUTC]</c></tag>
           <item>

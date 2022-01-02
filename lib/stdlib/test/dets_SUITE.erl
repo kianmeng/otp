@@ -1058,7 +1058,7 @@ items(I, N, C, L) ->
 %% Test open_file and repair.
 repair(Config) when is_list(Config) ->
     %% The short lived format 9(a).
-    %% Not very throughly tested here.
+    %% Not very thoroughly tested here.
     A9 = a9,
     Version9aS = filename:join(?datadir(Config), "version_9a.dets"),
     Version9aT = filename('v9a.dets', Config),
@@ -1997,7 +1997,7 @@ cache_sets(Config, DelayedWrite, Extra, Sz) ->
     del_and_ins(object, T, Size2, Tuple, Key, 1),
     del_and_ins(both, T, Size2, Tuple, Key, 1),
 
-    %% Overwrite an old objekt with exactly the same size.
+    %% Overwrite an old object with exactly the same size.
     Element = case element(2, Tuple) of
 		  255 -> 254;
 		  E -> E + 1
@@ -2139,7 +2139,7 @@ cache_bags(Config, DelayedWrite, Extra, Sz) ->
     del_and_ins(object, T, Size2, Tuple, Key, 1),
     del_and_ins(both, T, Size2, Tuple, Key, 1),
 
-    %% Overwrite an objekt on file with the same object.
+    %% Overwrite an object on file with the same object.
     ok = dets:insert(T, Tuple),
     ok = dets:sync(T),
     [Tuple2] = dets:lookup(T, Key),

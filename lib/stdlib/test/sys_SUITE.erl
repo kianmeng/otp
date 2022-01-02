@@ -129,10 +129,10 @@ install(Config) when is_list(Config) ->
 	fun(func_state,Event,ProcState) ->
 		case Event of
 		    {in,{'$gen_call',_From,{req,Arg}}} ->
-			io:format("Trigged\n"),
+			io:format("Triggered\n"),
 			Master ! {spy_got,{request,Arg},ProcState};
 		    Other ->
-			io:format("Trigged other=~p\n",[Other])
+			io:format("Triggered other=~p\n",[Other])
 		end,
                 func_state
 	end,

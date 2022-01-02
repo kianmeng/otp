@@ -167,7 +167,7 @@ t_start(Config) when is_list(Config) ->
 
     ok.
 
-%% Test the various error conditions in parallell (since the timeout
+%% Test the various error conditions in parallel (since the timeout
 %% in slave is 32 seconds).
 
 errors(Config) when is_list(Config) ->

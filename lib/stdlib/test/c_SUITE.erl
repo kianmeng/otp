@@ -209,7 +209,7 @@ memory(Config) when is_list(Config) ->
 mget(K, L) ->
     {value,{K,V}} = lists:keysearch(K, 1, L),
     test_v(c:memory(K)), % Check that c:memory/1 also accept this
-						% argument and returns an integer (usally
+						% argument and returns an integer (usually
 						% *not* the same as V).
     test_v(V).
 

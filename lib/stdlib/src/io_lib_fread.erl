@@ -138,7 +138,7 @@ fread_skip_white(Format, Line, N, Results) ->
     fread(Format, Line, N, Results).
 
 %% fread_field(Format) 
-%%  Reads the field specification paramters. Returns:
+%%  Reads the field specification parameters. Returns:
 %%
 %%	{RestFormat,FieldWidth,Suppress}
 

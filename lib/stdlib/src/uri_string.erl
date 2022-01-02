@@ -1472,7 +1472,7 @@ encode_fragment(Cs) ->
     encode(Cs, fun is_fragment/1).
 
 %%-------------------------------------------------------------------------
-%% Helper funtions for percent-decode
+%% Helper functions for percent-decode
 %%-------------------------------------------------------------------------
 
 -spec decode(list()|binary()) -> list() | binary().
@@ -1676,7 +1676,7 @@ bracket_ipv6(Addr) when is_list(Addr) ->
 
 
 %%-------------------------------------------------------------------------
-%% Helper funtions for recompose
+%% Helper functions for recompose
 %%-------------------------------------------------------------------------
 
 %%-------------------------------------------------------------------------

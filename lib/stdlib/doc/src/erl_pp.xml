@@ -79,7 +79,7 @@
         <p>The option <c>linewidth</c> controls the maximum line
           width for formatted lines (defaults to 72 characters).</p>
         <p>The option <c>indent</c> controls the
-          indention for formatted lines (defaults to 4 spaces).</p>
+          indentation for formatted lines (defaults to 4 spaces).</p>
       </desc>
     </datatype>
     <datatype>
@@ -170,7 +170,7 @@
         <p>The above strategy leads to problems if a user wants to
           convert the abstract representation, using the functions of
           this module back to Erlang source code. Typically, pattern
-          variables are output as atoms thus changing the sematics of
+          variables are output as atoms thus changing the semantics of
           the program. To solve this problem <c>legalize_vars/1</c>,
           when run on the abstract representation of a function, will
           return an equivalent function where all variables will have

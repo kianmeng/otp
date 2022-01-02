@@ -102,7 +102,7 @@ relay1(Pid) ->
 %% master in the description below.
 %%
 %% If hostname is the same for the master and the slave,
-%% the Erlang node will simply be spawned.  The only requirment for
+%% the Erlang node will simply be spawned.  The only requirement for
 %% this to work is that the 'erl' program can be found in PATH.
 %%
 %% If the master and slave are on different hosts, start/N uses
@@ -322,7 +322,7 @@ progname() ->
 %% path and spaces that separate arguments. The program is quoted to
 %% allow spaces in the path.
 %%
-%% Arguments could exist either if the executable is excplicitly given
+%% Arguments could exist either if the executable is explicitly given
 %% (through start/5) or if the -program switch to beam is used and
 %% includes arguments (typically done by cerl in OTP test environment
 %% in order to ensure that slave/peer nodes are started with the same

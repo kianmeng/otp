@@ -1628,7 +1628,7 @@ start_auto_save_timer(Head) ->
     ok.
 
 %% Peek the message queue and try to evaluate several
-%% lookup requests in parallel. Evalute delete_object, delete and
+%% lookup requests in parallel. Evaluate delete_object, delete and
 %% insert as well.
 stream_op(Op, Pid, Pids, Head, N) ->
     #head{fixed = Fxd, update_mode = M} = Head, 

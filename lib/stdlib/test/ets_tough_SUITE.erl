@@ -324,7 +324,7 @@ dirty_dget(DbName,Class,Key) ->
 
 %%% dput(ServerPid,Class,Key,Value) -> undefined | {value,OldValue}
 %%%
-%%% Inserts the given Value to be identified by Class,Key. Any prevoius
+%%% Inserts the given Value to be identified by Class,Key. Any previous
 %%% value is returned, or otherwise 'undefined'.
 
 dput(ServerPid,Class,Key,Value) ->
@@ -408,7 +408,7 @@ ddump_next(ServerPid,Count,Ticket) ->
 %%% data stored in them.
 %%%
 %%% Normally there is only one class table, Mtab (main table).
-%%% When dumping is initiated, each class is syncronously given a 
+%%% When dumping is initiated, each class is synchronously given a 
 %%% temporary table, Ttab, where all updates are stored. Reads are 
 %%% directed to the Ttab first, and only if not found there, Mtab is
 %%% consulted.
@@ -462,7 +462,7 @@ ddump_next(ServerPid,Count,Ticket) ->
 %%% ------------
 %%%
 %%% A slight problem is deleting an entire class while dumping is in
-%%% progress. For consitency, all user visible traces of the class must
+%%% progress. For consistency, all user visible traces of the class must
 %%% be deleted, while dumping must not be affected. On top of that, the
 %%% deleted class may well be recreated while dumping is still going on,
 %%% and entries added.

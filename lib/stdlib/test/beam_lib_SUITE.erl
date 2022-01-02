@@ -664,7 +664,7 @@ do_encrypted_abstr(Beam, Key) ->
     {ok,{simple,[{"Dbgi",Dbgi}]}} = beam_lib:chunks(Beam, ["Dbgi"]),
     <<0:8,8:8,"des3_cbc",_/binary>> = Dbgi,
 
-    %% Try som invalid funs.
+    %% Try some invalid funs.
     bad_fun(badfun, fun() -> ok end),
     bad_fun(badfun, {a,b}),
     bad_fun(blurf),

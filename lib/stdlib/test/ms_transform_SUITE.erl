@@ -262,7 +262,7 @@ bitsyntax(Config) when is_list(Config) ->
 %% Test that binary BIFs byte_size/1, binary_part/2, binary_part/3 are accepted
 binary_bifs(Config) when is_list(Config) ->
     setup(Config),
-    TestSet = [{<<"hello">>, <<"world">>}, {<<"souldn't">>, <<"match">>}],
+    TestSet = [{<<"hello">>, <<"world">>}, {<<"shouldn't">>, <<"match">>}],
     RunMS = fun(MS) -> ets:match_spec_run(TestSet, ets:match_spec_compile(MS)) end,
     % check byte_size/1
     MS1 = compile_and_run(<<"ets:fun2ms(fun({A, B}) when byte_size(A) == 5 -> {A, byte_size(B)} end)">>),

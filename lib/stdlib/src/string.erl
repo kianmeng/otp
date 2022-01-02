@@ -63,7 +63,7 @@
 
 -export([to_float/1, to_integer/1]).
 
-%% Old (will be deprecated) lists/string API kept for backwards compability
+%% Old (will be deprecated) lists/string API kept for backwards compatibility
 -export([len/1, concat/2, % equal/2, (extended in the new api)
          chr/2,rchr/2,str/2,rstr/2,
 	 span/2,cspan/2,substr/2,substr/3, tokens/2,
@@ -1753,7 +1753,7 @@ bin_search_str_2(Bin0, Start, Cont, First, SearchCPs) ->
 
 
 %%---------------------------------------------------------------------------
-%% OLD lists API kept for backwards compability
+%% OLD lists API kept for backwards compatibility
 %%---------------------------------------------------------------------------
 
 %% Robert's bit
@@ -1915,8 +1915,8 @@ substr1(String, _L) when is_list(String) -> [].	     %Be nice!
 substr2(String, 1) when is_list(String) -> String;
 substr2([_|String], S) -> substr2(String, S-1).
 
-%% tokens(String, Seperators).
-%%  Return a list of tokens seperated by characters in Seperators.
+%% tokens(String, Separators).
+%%  Return a list of tokens separated by characters in Separators.
 
 -spec tokens(String, SeparatorList) -> Tokens when
       String :: string(),

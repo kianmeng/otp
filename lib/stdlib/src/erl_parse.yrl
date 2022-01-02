@@ -1029,7 +1029,7 @@ Erlang code.
 -endif.
 
 %% Entry points compatible to old erl_parse.
-%% These really suck and are only here until Calle gets multiple
+%% These really suck and are only here until Caller gets multiple
 %% entry points working.
 
 -spec parse_form(Tokens) -> {ok, AbsForm} | {error, ErrorInfo} when

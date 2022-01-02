@@ -1456,7 +1456,7 @@ handle_event(_, _, State, Data) ->
       <name name="init_result" n_vars="2"/>
       <desc>
 	<p>
-	  For a succesful initialization,
+	  For a successful initialization,
 	  <c><anno>State</anno></c> is the initial
 	  <seetype marker="#state"><c>state()</c></seetype>
 	  and <c><anno>Data</anno></c> the initial server
@@ -1472,7 +1472,7 @@ handle_event(_, _, State, Data) ->
 	  <c>false</c> since there is no event to postpone.
 	</p>
 	<p>
-	  For an unsuccesful initialization,
+	  For an unsuccessful initialization,
           <c>{stop,<anno>Reason</anno>}</c>
 	  or <c>ignore</c> should be used; see
           <seemfa marker="#start_link/3"><c>start_link/3,4</c></seemfa>.

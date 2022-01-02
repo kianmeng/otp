@@ -33,7 +33,7 @@
 %% - lookup(X, T): looks up key X in tree T; returns {value, V}, or
 %%   `none' if the key is not present.
 %%
-%% - get(X, T): retreives the value stored with key X in tree T. Assumes
+%% - get(X, T): retrieves the value stored with key X in tree T. Assumes
 %%   that the key is present in the tree.
 %%
 %% - insert(X, V, T): inserts key X with value V into tree T; returns
@@ -142,7 +142,7 @@
 %% Performance is comparable to the AVL trees in the Erlang book (and
 %% faster in general due to less overhead); the difference is that
 %% deletion works for my trees, but not for the book's trees. Behaviour
-%% is logaritmic (as it should be).
+%% is logarithmic (as it should be).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Some macros.

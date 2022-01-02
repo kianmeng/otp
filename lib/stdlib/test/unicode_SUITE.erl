@@ -79,7 +79,7 @@ ex_binaries_errors_utf8(Config) when is_list(Config) ->
 	  OKList = lists:flatten(lists:duplicate(N,Seq255)),
 	  OKBin = unicode:characters_to_binary(OKList),
 	  OKLen = length(OKList),
-	  %% Copy to avoid that the binary get's writable
+	  %% Copy to avoid that the binary gets writable
 	  PartlyBroken = binary:copy(<<OKBin/binary, BrokenPart/binary>>),
 	  PBSz = byte_size(PartlyBroken),
 	  {error,OKList,DeepBrokenPart} = 

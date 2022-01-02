@@ -379,7 +379,7 @@ ets:select(emp_tab, ets:fun2ms(
         <p>Relational operators: &gt;, &gt;=, &lt;, =&lt;, =:=, ==, =/=, /=</p>
       </item>
       <item>
-        <p>Arithmetics: <c>+</c>, <c>-</c>, <c>*</c>,
+        <p>Arithmetic: <c>+</c>, <c>-</c>, <c>*</c>,
 	<c>div</c>, <c>rem</c></p>
       </item>
       <item>

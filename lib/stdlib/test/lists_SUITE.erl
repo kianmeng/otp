@@ -213,7 +213,7 @@ reverse_test(Num) ->
     ok.
 
 %% Test the lists:member() implementation.  This test case depends on
-%% lists:reverse() to work, wich is tested in a separate test case.
+%% lists:reverse() to work, which is tested in a separate test case.
 member(Config) when is_list(Config) ->
     {'EXIT',{badarg,_}} = (catch lists:member(45, {a,b,c})),
     {'EXIT',{badarg,_}} = (catch lists:member(45, [0|non_list_tail])),

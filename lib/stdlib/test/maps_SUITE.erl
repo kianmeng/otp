@@ -78,7 +78,7 @@ t_from_list_kill_process(Config) when is_list(Config) ->
                   MapSize = 10000,
                   List = [{X, X} || X <- lists:seq(1, MapSize)],
                   (fun Loop(Round) ->
-                          io:format("Sarting Round ~p~n", [Round]),
+                          io:format("Starting Round ~p~n", [Round]),
                           case Round =:= 0 of
                               true ->
                                   Killer ! starting;
@@ -108,7 +108,7 @@ t_from_keys_kill_process(Config) when is_list(Config) ->
                   MapSize = 10000,
                   List = lists:seq(1, MapSize),
                   (fun Loop(Round) ->
-                          io:format("Sarting Round ~p~n", [Round]),
+                          io:format("Starting Round ~p~n", [Round]),
                           case Round =:= 0 of
                               true ->
                                   Killer ! starting;
@@ -139,7 +139,7 @@ t_keys_kill_process(Config) when is_list(Config) ->
                   List = lists:seq(1, MapSize),
                   Map = maps:from_keys(List, ok),
                   (fun Loop(Round) ->
-                          io:format("Sarting Round ~p~n", [Round]),
+                          io:format("Starting Round ~p~n", [Round]),
                           case Round =:= 0 of
                               true ->
                                   Killer ! starting;
@@ -170,7 +170,7 @@ t_values_kill_process(Config) when is_list(Config) ->
                   List = [{V, V} || V <- lists:seq(1, MapSize)],
                   Map = maps:from_list(List),
                   (fun Loop(Round) ->
-                          io:format("Sarting Round ~p~n", [Round]),
+                          io:format("Starting Round ~p~n", [Round]),
                           case Round =:= 0 of
                               true ->
                                   Killer ! starting;

@@ -64,7 +64,7 @@
     characters are represented in a network protocol.</p>
     <p>The functions implemented by this module cover the following use cases:</p>
     <list type="bulleted">
-      <item>Parsing URIs into its components and returing a map<br></br>
+      <item>Parsing URIs into its components and returning a map<br></br>
       <seemfa marker="#parse/1"><c>parse/1</c></seemfa>
       </item>
       <item>Recomposing a map of URI components into a URI string<br></br>
@@ -161,7 +161,7 @@
 	major URI component, and also in the most important characters sets.
 	Please note that this function does not replace the ABNF rules defined by
 	the standards, these character sets are derived directly from those
-	aformentioned rules. For more information see the
+	aforementioned rules. For more information see the
 	<seeguide marker="uri_string_usage#percent_encoding">Uniform Resource
 	Identifiers</seeguide> chapter in stdlib's Users Guide.</p>
       </desc>

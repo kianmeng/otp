@@ -63,7 +63,7 @@
 	  input,       % input object (fun)
 	  file_filter, % file filter (boolean fun)
 	  open_opts,   % options passed to file:open
-	  feedback,    % feeback (fun)
+	  feedback,    % feedback (fun)
 	  cwd          % directory to relate paths to
 	 }).
 
@@ -72,7 +72,7 @@
 	  input,       % input object (fun)
 	  comment,     % zip-file comment
 	  open_opts,   % options passed to file:open
-	  feedback,    % feeback (fun)
+	  feedback,    % feedback (fun)
 	  cwd,         % directory to relate paths to
 	  compress,    % compress files with these suffixes
 	  uncompress   % uncompress files with these suffixes

@@ -246,7 +246,7 @@ characters_to_nfd_binary(CD, N, Row, Acc) when N > 0 ->
 characters_to_nfd_binary(CD, _, Row, Acc) ->
     characters_to_nfd_binary(CD, ?GC_N, [], prepend_row_to_acc(Row, Acc)).
 
-%% Compability Canonical decompose string to list of chars.
+%% Compatibility Canonical decompose string to list of chars.
 -spec characters_to_nfkd_list(chardata()) -> [char()] | {error, [char()], chardata()}.
 characters_to_nfkd_list(CD) ->
     try
@@ -319,7 +319,7 @@ characters_to_nfc_binary(CD, N, Row, Acc) when N > 0 ->
 characters_to_nfc_binary(CD, _, Row, Acc) ->
     characters_to_nfc_binary(CD, ?GC_N, [], prepend_row_to_acc(Row, Acc)).
 
-%% Compability Canonical compose string to list of chars
+%% Compatibility Canonical compose string to list of chars
 -spec characters_to_nfkc_list(chardata()) -> [char()] | {error, [char()], chardata()}.
 characters_to_nfkc_list(CD) ->
     try

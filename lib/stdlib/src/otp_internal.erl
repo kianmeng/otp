@@ -180,9 +180,9 @@ obsolete(erlang, hash, 2) ->
 obsolete(httpd_conf, check_enum, 2) ->
     {removed, "use lists:member/2 instead"};
 obsolete(httpd_conf, clean, 1) ->
-    {removed, "use sting:strip/1 instead or possibly the re module"};
+    {removed, "use string:strip/1 instead or possibly the re module"};
 obsolete(httpd_conf, custom_clean, 3) ->
-    {removed, "use sting:strip/1 instead or possibly the re module"};
+    {removed, "use string:strip/1 instead or possibly the re module"};
 obsolete(httpd_conf, is_directory, 1) ->
     {removed, "use filelib:is_dir/1 instead"};
 obsolete(httpd_conf, is_file, 1) ->

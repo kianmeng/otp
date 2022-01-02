@@ -40,9 +40,9 @@
 %%% This is a rewrite of supervisor_bridge from BS.3.
 %%%
 %%% This module is built to function as process code
-%%% for a process sitting inbetween a real supervisor
-%%% and a not start&recovery complient server/system
-%%% The process inbetween simulates start&recovery
+%%% for a process sitting in between a real supervisor
+%%% and a not start&recovery compliant server/system
+%%% The process in between simulates start&recovery
 %%% behaviour of the server/system below.
 %%%
 %%% The supervisor_bridge behaviour must export the following

@@ -347,7 +347,7 @@
           <item>
             <p>By default, all existing files with the same name as files in
               the tar file are overwritten. With this option, existing
-              files are not overwriten.</p>
+              files are not overwritten.</p>
           </item>
           <tag><c>verbose</c></tag>
           <item>

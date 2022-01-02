@@ -470,7 +470,7 @@
             Use the <c>?CT_PEER(["erl_arg1"])</c> macro provided by Common Test
             <c>-include_lib("common_test/include/ct.hrl")</c> for convenience.
             It starts a new peer using Erlang distribution as the control channel,
-            supplies thes calling module's code path to the peer, and uses the calling
+            supplies this calling module's code path to the peer, and uses the calling
             function name for the name prefix.
           </p>
         </note>

@@ -1500,14 +1500,14 @@ le_info(#prepared{qh = #qlc_table{format_fun = FormatFun, trav_MS = TravMS,
         _ when FormatFun =:= undefined ->
             {table, {'$MOD', '$FUN', []}};
         {Pos, Vals} ->
-            Formated = try FormatFun({lookup, Pos, Vals, NElements, DepthFun})
+            Formatted = try FormatFun({lookup, Pos, Vals, NElements, DepthFun})
                        catch _:_ -> FormatFun({lookup, Pos, Vals})
                        end,
             if
                 MS =:= no_match_spec ->
-                    {table, Formated};
+                    {table, Formatted};
                 true ->
-                    {list, {table, Formated}, depth(MS, Depth)}
+                    {list, {table, Formatted}, depth(MS, Depth)}
             end;
         _ when TravMS, is_list(MS) ->
             {table, FormatFun({match_spec, depth(MS, Depth)})};
@@ -3756,8 +3756,8 @@ maybe_error_logger(Name, Why) ->
     [_, _, {?MODULE,maybe_error_logger,_,_} | Stacktrace] =
 	expand_stacktrace(),
     Trimmer = fun(M, _F, _A) -> M =:= erl_eval end,
-    Formater = fun(Term, I) -> io_lib:print(Term, I, 80, -1) end,
-    X = erl_error:format_stacktrace(1, Stacktrace, Trimmer, Formater),
+    Formatter = fun(Term, I) -> io_lib:print(Term, I, 80, -1) end,
+    X = erl_error:format_stacktrace(1, Stacktrace, Trimmer, Formatter),
     error_logger:Name("qlc: temporary file was needed for ~w\n~ts\n",
                       [Why, lists:flatten(X)]).
 

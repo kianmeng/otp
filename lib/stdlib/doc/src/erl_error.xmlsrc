@@ -136,7 +136,7 @@ end</code>
         <p>This callback is called when <seemfa marker="#format_exception/4"><c>
           format_exception/4</c></seemfa> or similar functionality wants to provide
           extra information about an error. The <c>Module</c>:<c>Function</c> called
-          is the one specificed by the <c>error_info</c> map.</p>
+          is the one specified by the <c>error_info</c> map.</p>
           <p>The function should return a map with additional information about what
             have caused the exception. The possible keys of the map are:</p>
           <taglist>

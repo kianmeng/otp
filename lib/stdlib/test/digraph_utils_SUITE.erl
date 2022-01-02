@@ -217,7 +217,7 @@ tree(Config) when is_list(Config) ->
     false = is_tree([{a,b},{a,c},{b,d},{b,e}, {b,e}]),
     true = is_tree([{a,c},{c,b}]),
     true = is_tree([{b,a},{c,a}]),
-    %% Parallel edges. Acyclic and with one componets
+    %% Parallel edges. Acyclic and with one components
     %% (according to the digraph module).
     false = is_tree([{a,b},{a,b}]),
 

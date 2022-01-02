@@ -1627,7 +1627,7 @@ frame2frames(F) ->
 match_in_pattern({match, _, E10, E20}, F0, BF) ->
     {E1, F1} = match_in_pattern(E10, F0, BF),
     {E2, F} = match_in_pattern(E20, F1, BF),
-    %% This is for join: chosing a constant could "hide" a variable.
+    %% This is for join: choosing a constant could "hide" a variable.
     E = case BF('=:=', E1) of
             true -> E1;
             false -> E2

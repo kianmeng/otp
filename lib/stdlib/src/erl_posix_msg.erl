@@ -113,7 +113,7 @@ message_1(enomem) -> <<"not enough memory">>;
 message_1(enomsg) -> <<"no message of desired type">>;
 message_1(enonet) -> <<"machine is not on the network">>;
 message_1(enopkg) -> <<"package not installed">>;
-message_1(enoprotoopt) -> <<"bad proocol option">>;
+message_1(enoprotoopt) -> <<"bad protocol option">>;
 message_1(enospc) -> <<"no space left on device">>;
 message_1(enosr) -> <<"out of stream resources or not a stream device">>;
 message_1(enostr) -> <<"not a stream">>;

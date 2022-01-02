@@ -536,7 +536,7 @@ from_orddict_test_() ->
      ?_assert(?LET(L, [{N,0}||N<-lists:seq(0,N4-1)],
 		   L =:= to_orddict(from_orddict(L)))),
 
-     %% Hole in the begining
+     %% Hole in the beginning
      ?_assert(?LET(L, [{0,0}],
 		   L =:= sparse_to_orddict(from_orddict(L)))),
      ?_assert(?LET(L, [{N0,0}],

@@ -1260,9 +1260,9 @@ stop_runerl_node(CPid) ->
 get_progs() ->
     case os:type() of
 	{unix,freebsd} ->
-	    {error,"cant use run_erl on freebsd"};
+	    {error,"can't use run_erl on freebsd"};
 	{unix,openbsd} ->
-	    {error,"cant use run_erl on openbsd"};
+	    {error,"can't use run_erl on openbsd"};
 	{unix,_} ->
 	    case os:find_executable("run_erl") of
 		RE when is_list(RE) ->

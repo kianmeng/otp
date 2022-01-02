@@ -490,7 +490,7 @@ substitute_negations_1([], P) ->
 %% result when expanded, it must be included in the expansion list. The
 %% inserted terms are not expanded recursively. If
 %% <code>Expansions</code> contains more than one property with the same
-%% key, only the first occurrance is used.</p>
+%% key, only the first occurrence is used.</p>
 %%
 %% @see normalize/2
 

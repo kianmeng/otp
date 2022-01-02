@@ -716,7 +716,7 @@ t_repair_continuation_do(OptsIn) ->
     verify_etsmem(EtsMem).
 
 
-%% Test correct default vaules of a new ets table.
+%% Test correct default values of a new ets table.
 default(Config) when is_list(Config) ->
     %% Default should be set,protected
     EtsMem = etsmem(),
@@ -2863,7 +2863,7 @@ do_fixtable_iter_bag(T) ->
     io:format("Create ~p keys\n", [NKeys]),
 
     %% Fixate even before inserts just to maintain small table size
-    %% and increase likelyhood of different keys in same bucket.
+    %% and increase likelihood of different keys in same bucket.
     ets:safe_fixtable(T,true),
     InsRes = [begin
                   [begin
@@ -7385,7 +7385,7 @@ otp_9423(Config) when is_list(Config) ->
                               receive
                                   stop ->
                                       io:format("~p got stop\n", [self()]),
-                                      [end_of_work | {"Succeded=",S,"Failed=",F}]
+                                      [end_of_work | {"Succeeded=",S,"Failed=",F}]
                               after 0 ->
                                       %%io:format("~p (~p) doing lookup\n", [self(), {S,F}]),
                                       try ets:lookup(otp_9423, key) of
@@ -7629,7 +7629,7 @@ ms_excessive_nesting(Config) when is_list(Config) ->
     {comment, "match_spec_compile() "++ENMSC++"; select_replace(_,[ordered_set]) "++SRT++"; select_replace(_,[set]) "++SRH}.
 
 %% The following help functions are used by
-%% throughput_benchmark. They are declared on the top level beacuse
+%% throughput_benchmark. They are declared on the top level because
 %% declaring them as function local funs cause a scalability issue.
 get_op([{_,O}], _RandNum) ->
     O;

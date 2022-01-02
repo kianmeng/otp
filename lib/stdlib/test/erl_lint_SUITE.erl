@@ -2083,7 +2083,7 @@ otp_5362(Config) when is_list(Config) ->
                       {{16,24},erl_lint,{field_name_is_variable,ok,'Var'}}]}},
 
 	  %% Nowarn_bif_clash has changed behaviour as local functions
-	  %% nowdays supersede auto-imported BIFs, why nowarn_bif_clash in itself generates an error
+	  %% nowadays supersede auto-imported BIFs, why nowarn_bif_clash in itself generates an error
 	  %% (OTP-8579) /PaN
           {otp_5362_4,
            <<"-compile(nowarn_deprecated_function).
@@ -2879,7 +2879,7 @@ bif_clash(Config) when is_list(Config) ->
                   size(X).
 
               %% No warning for the following calls, since they
-              %% are unambigous.
+              %% are unambiguous.
               b(X) ->
                   erlang:size(X).
 
@@ -2909,7 +2909,7 @@ bif_clash(Config) when is_list(Config) ->
              ">>,
 	   {[nowarn_unused_function,nowarn_bif_clash]},
 	   {errors,[{erl_lint,disallowed_nowarn_bif_clash}],[]}},
-	  %% As long as noone calls an overridden BIF, it's totally OK
+	  %% As long as no one calls an overridden BIF, it's totally OK
 	  {clash3,
            <<"-export([size/1]).
               size({N,_}) ->
@@ -3094,7 +3094,7 @@ bif_clash(Config) when is_list(Config) ->
 	   {warnings,[{{2,16},erl_lint,{redefine_bif_import,{binary_part,3}}}]}},
 	  %% Don't accept call to a guard BIF if there is a local definition
 	  %% or an import with the same name. Note: is_record/2 is an
-	  %% exception, since it is more of syntatic sugar than a real BIF.
+	  %% exception, since it is more of syntactic sugar than a real BIF.
 	  {clash21,
            <<"-export([is_list/1]).
               -import(x, [is_tuple/1]).
@@ -4200,8 +4200,8 @@ otp_14323(Config) ->
 
               -dialyzer(nowarn_function). % unknown option
               -dialyzer(1). % badly formed
-              -dialyzer(malformed). % unkonwn option
-              -dialyzer({malformed,f/0}). % unkonwn option
+              -dialyzer(malformed). % unknown option
+              -dialyzer({malformed,f/0}). % unknown option
               -dialyzer({nowarn_function,a/1}). % undefined function
               -dialyzer({nowarn_function,{a,-1}}). % badly formed
 

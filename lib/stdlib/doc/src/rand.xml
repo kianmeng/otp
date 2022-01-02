@@ -171,7 +171,7 @@
       </p>
       <p>
 	Uniform integer ranges had a skew in the probability distribution
-	that was not noticable for small ranges but for large ranges
+	that was not noticeable for small ranges but for large ranges
 	less than the generator's precision the probability to produce
 	a low number could be twice the probability for a high.
       </p>
@@ -498,7 +498,7 @@ tests. We suggest to use a sign test to extract a random Boolean value.</pre>
       <desc>
         <marker id="seed-1"/>
         <p>
-	  Seeds random number generation with the specifed algorithm and
+	  Seeds random number generation with the specified algorithm and
           time-dependent data if <c><anno>AlgOrStateOrExpState</anno></c>
 	  is an algorithm.
           <c><anno>Alg</anno>&nbsp;=&nbsp;default</c>
@@ -536,7 +536,7 @@ tests. We suggest to use a sign test to extract a random Boolean value.</pre>
       <fsummary>Seed random number generator.</fsummary>
       <desc>
         <p>
-	  Seeds random number generation with the specifed algorithm and
+	  Seeds random number generation with the specified algorithm and
           time-dependent data if <c><anno>AlgOrStateOrExpState</anno></c>
 	  is an algorithm.
           <c><anno>Alg</anno>&nbsp;=&nbsp;default</c>
@@ -628,7 +628,7 @@ end.</pre>
 	    <seemfa marker="#uniform/0"><c>uniform/0</c></seemfa>
 	    because all bits in the mantissa are random.
 	    This property, in combination with the fact that exactly zero
-	    is never returned is useful for algoritms doing for example
+	    is never returned is useful for algorithms doing for example
 	    <c>1.0 / <anno>X</anno></c> or <c>math:log(<anno>X</anno>)</c>.
 	  </p>
 	</note>
@@ -711,7 +711,7 @@ end.</pre>
 	    <seemfa marker="#uniform_s/1"><c>uniform_s/1</c></seemfa>
 	    because all bits in the mantissa are random.
 	    This property, in combination with the fact that exactly zero
-	    is never returned is useful for algoritms doing for example
+	    is never returned is useful for algorithms doing for example
 	    <c>1.0 / <anno>X</anno></c> or <c>math:log(<anno>X</anno>)</c>.
 	  </p>
 	</note>

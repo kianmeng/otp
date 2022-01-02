@@ -15,7 +15,7 @@ init([child]) ->
 	    %% that restart intensity is not reached -> restart loop.
 	    %% (Note that if we use simple_one_for_one, and start
 	    %% 'many' child instances, the restart frequency must be
-	    %% ajusted accordingly.)
+	    %% adjusted accordingly.)
             timer:sleep(2000), % NOTE: this could be a gen_server call timeout
 
             {stop, error}

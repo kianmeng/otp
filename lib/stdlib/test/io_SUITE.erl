@@ -1043,7 +1043,7 @@ g_normalized() ->
 
 g_choice() ->
     %% Exponent should be used when and only when the string is shorter.
-    %% (g_misc/0 checks this too, and probably more throughly).
+    %% (g_misc/0 checks this too, and probably more thoroughly).
     L = [0.0003, 3.0e-5, 3.3e-5, 3.3e-4,
          314.0, 314.1, 310.0, 3.1e6, -100.0,
          3.34e4, 3.0e3, 3.34333e9, 3.3433323e10, 33433323700.0,

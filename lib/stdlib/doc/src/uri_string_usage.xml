@@ -50,7 +50,7 @@
     The former is a classical standard with a proper formal syntax, using the so
     called <url href="https://www.ietf.org/rfc/rfc2234.txt">Augmented Backus-Naur Form
     (ABNF)</url> for describing
-    the grammar, while the latter is a living document describing the current pratice,
+    the grammar, while the latter is a living document describing the current practice,
     that is, how a majority of Web browsers work with URIs. WHAT WG URL is Web focused
     and it has no formal grammar but a plain english description of the algorithms
     that should be followed.</p>
@@ -138,7 +138,7 @@
   </pre>
   <p>The URI parser tries all possible combinations to interpret the input and fails
   at the last attempt when it encounters the colon character <c>":"</c>. Note, that
-  the inital fault occurs when the parser attempts to interpret the character
+  the initial fault occurs when the parser attempts to interpret the character
   <c>"ö"</c> and after a failure back-tracks to the point where it has another
   possible parsing alternative.</p>
   <p>The proper way to solve this problem is to use

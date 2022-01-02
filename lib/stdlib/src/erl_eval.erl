@@ -622,10 +622,10 @@ do_apply(Func, As, Bs0, Ef, RBs) ->
           end,
     case {Env,Ef} of
         {{env,[{FBs,FLf,FEf,FCs}]},_} ->
-            %% If we are evaluting within another function body 
+            %% If we are evaluating within another function body 
             %% (RBs =/= none), we return RBs when this function body
-            %% has been evalutated, otherwise we return Bs0, the
-            %% bindings when evalution of this function body started.
+            %% has been evaluated, otherwise we return Bs0, the
+            %% bindings when evaluation of this function body started.
             NRBs = if
                        RBs =:= none -> Bs0;
                        true -> RBs
@@ -780,8 +780,8 @@ eval_map_fields([], Bs, _Lf, _Ef, Acc) ->
     {lists:reverse(Acc),Bs}.
 
 
-%% RBs is the bindings to return when the evalution of a function
-%% (fun) has finished. If RBs =:= none, then the evalution took place
+%% RBs is the bindings to return when the evaluation of a function
+%% (fun) has finished. If RBs =:= none, then the evaluation took place
 %% outside a function. If RBs =:= value, only the value (not the bindings)
 %% is to be returned (to a compiled function).
 

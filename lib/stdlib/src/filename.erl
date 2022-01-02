@@ -84,7 +84,7 @@
 
 %% Converts a relative filename to an absolute filename
 %% or the filename itself if it already is an absolute filename
-%% Note that no attempt is made to create the most beatiful
+%% Note that no attempt is made to create the most beautiful
 %% absolute name since this can give incorrect results on 
 %% file systems which allows links.
 %% Examples:

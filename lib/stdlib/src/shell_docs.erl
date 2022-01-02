@@ -39,7 +39,7 @@
 %% Used by chunks.escript in erl_docgen
 -export([validate/1, normalize/1, supported_tags/0]).
 
-%% Convinience functions
+%% Convenience functions
 -export([get_doc/1, get_doc/3, get_type_doc/3, get_callback_doc/3]).
 
 -export_type([chunk_elements/0, chunk_element_attr/0]).

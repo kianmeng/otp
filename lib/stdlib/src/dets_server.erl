@@ -34,7 +34,7 @@
 -export([init/1, handle_call/3, handle_cast/2, handle_info/2, terminate/2,
         code_change/3]).
 
-%% record for not yet handled reqeusts to open or close files
+%% record for not yet handled requests to open or close files
 -record(pending, {tab, ref, pid, from, reqtype, clients}). % [{From,Args}]
 
 %% state for the dets server

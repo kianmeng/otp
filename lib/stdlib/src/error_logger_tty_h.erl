@@ -91,7 +91,7 @@ terminate(_Reason, #st{prev_handler=PrevHandler}) ->
 code_change(_OldVsn, State, _Extra) ->
     {ok, State}.
 
-%% Exported (but unoffical) API.
+%% Exported (but unofficial) API.
 write_event(Event, IoMod) ->
     do_write_event(#st{io_mod=IoMod}, Event).
 

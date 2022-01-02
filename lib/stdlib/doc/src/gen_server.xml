@@ -766,7 +766,7 @@ gen_server:abcast     -----> Module:handle_cast/2
         <p>This function is called by a <c>gen_server</c> process when it is
           to update its internal state during a release upgrade/downgrade,
           that is, when the instruction <c>{update,Module,Change,...}</c>,
-          where <c>Change={advanced,Extra}</c>, is specifed in
+          where <c>Change={advanced,Extra}</c>, is specified in
           the <c>appup</c> file. For more information, see section
           <seeguide marker="system/design_principles:release_handling#instr">
           Release Handling Instructions</seeguide> in OTP Design Principles.</p>

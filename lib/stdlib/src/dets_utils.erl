@@ -1488,7 +1488,7 @@ bplus_reorganize_tree_ins(Tree, NewSubTree, Pos) ->
     Size = bplus_get_size(Tree),
     if
 	Pos == Size ->
-            % Pos is the rightmost postion!.
+            % Pos is the rightmost position!.
             % Our only chance is the left one.
 	    LTree = bplus_get_tree(Tree, Pos-1),
  	    case ?FULL(LTree) of
@@ -1537,7 +1537,7 @@ bplus_reorganize_tree_del(Tree, NewSubTree, Pos) ->
     Size = bplus_get_size(Tree),
     if
 	Pos == Size ->
-            % Pos is the rightmost postion!.
+            % Pos is the rightmost position!.
             % Our only chance is the left one.
 	    LTree = bplus_get_tree(Tree, Pos-1),
 	    case ?LOW_FILLED(LTree) of
@@ -1681,7 +1681,7 @@ bplus_split_node_3(Node, Pos, LeftAcc, DKey, RightAcc) ->
 		       DKey, RightAcc).
 
 %%-----------------------------------------------------------------
-%% Inserts a joined tree insted of the old one at position Pos and
+%% Inserts a joined tree instead of the old one at position Pos and
 %% the one nearest left/right brother.
 %%-----------------------------------------------------------------
 bplus_joinleft_tree(Tree, JoinedTree, Pos) ->

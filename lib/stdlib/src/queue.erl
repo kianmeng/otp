@@ -476,7 +476,7 @@ all(Pred, {R, F}) when is_function(Pred, 1), is_list(R), is_list(F) ->
 all(Pred, Q) ->
     erlang:error(badarg, [Pred, Q]).
 
-%% Delete the first occurence of an item in the queue,
+%% Delete the first occurrence of an item in the queue,
 %% according to queue order.
 %%
 %% O(len(Q1)) worst case
@@ -504,7 +504,7 @@ delete(Item, {R0, F0} = Q) when is_list(R0), is_list(F0) ->
 delete(Item, Q) ->
     erlang:error(badarg, [Item, Q]).
 
-%% Delete the last occurence of an item in the queue,
+%% Delete the last occurrence of an item in the queue,
 %% according to queue order.
 %%
 %% O(len(Q1)) worst case
@@ -541,7 +541,7 @@ delete_rear(Item, [X|Rest]) ->
 delete_rear(_, []) ->
     false.
 
-%% Delete the first occurence of an item in the queue
+%% Delete the first occurrence of an item in the queue
 %% matching a predicate, according to queue order.
 %%
 %% O(len(Q1)) worst case
@@ -569,7 +569,7 @@ delete_with(Pred, {R0, F0} = Q) when is_function(Pred, 1), is_list(R0), is_list(
 delete_with(Pred, Q) ->
     erlang:error(badarg, [Pred, Q]).
 
-%% Delete the last occurence of an item in the queue
+%% Delete the last occurrence of an item in the queue
 %% matching a predicate, according to queue order.
 %%
 %% O(len(Q1)) worst case

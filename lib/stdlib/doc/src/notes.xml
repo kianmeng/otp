@@ -475,7 +475,7 @@
 	    order to prevent late responses. The <c>gen_statem</c>
 	    behavior still use a proxy process in the distributed
 	    case, since it has always prevented late replies and
-	    aliases wont work against pre OTP 24 nodes. The proxy
+	    aliases won't work against pre OTP 24 nodes. The proxy
 	    process can be removed in OTP 26.</p>
           <p>
 	    The alias feature also made it possible to introduce new
@@ -4878,11 +4878,11 @@
 	    Characteristics impact: A call to the
 	    <c>garbage_collect/1</c> BIF or the
 	    <c>check_process_code/2</c> BIF will normally take longer
-	    time to complete while the system as a whole wont be as
+	    time to complete while the system as a whole won't be as
 	    much negatively effected by the operation as before. A
 	    call to <c>code:purge/1</c> and <c>code:soft_purge/1</c>
 	    may complete faster or slower depending on the state of
-	    the system while the system as a whole wont be as much
+	    the system while the system as a whole won't be as much
 	    negatively effected by the operation as before.</p>
           <p>
 	    Own Id: OTP-11388 Aux Id: OTP-11535, OTP-11648 </p>
@@ -4973,7 +4973,7 @@
         </item>
         <item>
           <p>
-	    Export zip option types to allow referal from other
+	    Export zip option types to allow referral from other
 	    modules.</p>
           <p>
 	    Thanks to Pierre Fenoll and Håkan Mattson</p>
@@ -5522,7 +5522,7 @@
 	    has been taken over by new functions
 	    <c>write_latin1_string()</c> and so on. There are also
 	    new functions to write Unicode strings as Latin-1
-	    strings, mainly targetted towards the Erlang pretty
+	    strings, mainly targeted towards the Erlang pretty
 	    printer (<c>erl_pp</c>). </p>
           <p>
 	    Own Id: OTP-10745 Aux Id: OTP-10302 </p>
@@ -5791,7 +5791,7 @@
 	    and async threads operations when you exit the emulator,
 	    you use erlang:halt/2 with an integer first argument and
 	    an option list containing {flush,false} as the second
-	    argument. Note that now is flushing not dependant of the
+	    argument. Note that now is flushing not dependent of the
 	    exit code, and you cannot only flush async threads
 	    operations which we deemed as a strange behaviour anyway.
 	    </p>
@@ -6970,7 +6970,7 @@
 	    Own Id: OTP-8579</p>
         </item>
         <item>
-	    <p>The undocumented, unsupport, and deprecated function
+	    <p>The undocumented, unsupported, and deprecated function
 	    <c>lists:flat_length/1</c> has been removed.</p>
           <p>
 	    Own Id: OTP-8584</p>
@@ -7217,7 +7217,7 @@
 	    app-vsn/ebin/mod.beam file, the file info for the app-vsn
 	    and app-vsn/ebin directories are faked using the file
 	    info from the archive file as origin. The virtual
-	    direcories can also be listed. For short, the top
+	    directories can also be listed. For short, the top
 	    directories are virtual if they does not exist.</p>
           <p>
 	    Own Id: OTP-8387</p>

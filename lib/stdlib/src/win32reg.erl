@@ -154,8 +154,8 @@ delete_key({win32reg, Reg}) when is_port(Reg) ->
 	    Cmd2 = [?cmd_delete_key],
 	    Reg ! {self(), {command, [Cmd2, Name, 0]}},
 	    get_result(Reg);
-	{error, Erorr} ->
-	    {error, Erorr}
+	{error, Error} ->
+	    {error, Error}
     end.
 
 -spec set_value(RegHandle, Name, Value) -> ReturnValue when

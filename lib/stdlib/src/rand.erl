@@ -194,7 +194,7 @@ uniform_range(Range, #{next:=Next, bits:=Bits} = AlgHandler, R, V) ->
             %% range, which would make the probability to draw a good
             %% number better than 0.5.  And repeating that until
             %% success i guess would take 2 times statistically amortized.
-            %% But since the probability for fairly many attemtpts
+            %% But since the probability for fairly many attempts
             %% is not that low, use two bits more than the range which 
             %% should make the probability to draw a bad number under 0.25,
             %% which decreases the bad case probability a lot.

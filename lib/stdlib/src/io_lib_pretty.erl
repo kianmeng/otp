@@ -491,7 +491,7 @@ search_depth(Lower, Upper, Term, T, Dl, Du, RF, Enc, Str) ->
 	{_, Len, _, _} when Len > T ->
             %% Len can be greater than Upper's length.
             %% This is a bit expensive since the work to
-            %% crate Upper is wasted. It is the price
+            %% create Upper is wasted. It is the price
             %% to pay to get a more balanced output.
             search_depth(Lower, If, Term, T, Dl, D1, RF, Enc, Str);
         _ ->

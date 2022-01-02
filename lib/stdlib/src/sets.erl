@@ -610,7 +610,7 @@ mk_seg(16) -> {[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]}.
 %% expand_segs(Segs, EmptySeg) -> NewSegs.
 %% contract_segs(Segs) -> NewSegs.
 %%  Expand/contract the segment tuple by doubling/halving the number
-%%  of segments.  We special case the powers of 2 upto 32, this should
+%%  of segments.  We special case the powers of 2 up to 32, this should
 %%  catch most case.  N.B. the last element in the segments tuple is
 %%  an extra element containing a default empty segment.
 -spec expand_segs(segs(E), seg()) -> segs(E).

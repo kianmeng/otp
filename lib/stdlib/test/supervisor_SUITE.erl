@@ -711,7 +711,7 @@ child_adm(Config) when is_list(Config) ->
     [1,1,0,1] = get_child_counts(sup_test),
     link(CPid),
 
-    %% Start of an already runnig process 
+    %% Start of an already running process 
     {error,{already_started, CPid}} =
 	supervisor:start_child(sup_test, Child),
 
@@ -798,7 +798,7 @@ child_adm_simple(Config) when is_list(Config) ->
     [_] = supervisor:which_children(sup_test),
     [1,1,0,1] = get_child_counts(sup_test),
     false = erlang:is_process_alive(CPid1),
-    %% Terminate non-existing proccess is ok
+    %% Terminate non-existing process is ok
     ok = supervisor:terminate_child(sup_test,CPid1),
     [_] = supervisor:which_children(sup_test),
     [1,1,0,1] = get_child_counts(sup_test),
@@ -2137,7 +2137,7 @@ simple_one_for_one_scale_many_temporary_children(_Config) ->
 	    if Scaling > 50 ->
 		    %% The scaling shoul be linear (i.e.10, really), but we
 		    %% give some extra here to avoid failing the test
-		    %% unecessarily.
+		    %% unnecessarily.
 		    ct:fail({bad_scaling,Scaling});
 	       true ->
 		    ok

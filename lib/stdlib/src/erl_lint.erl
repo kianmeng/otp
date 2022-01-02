@@ -72,7 +72,7 @@ value_option(Flag, Default, On, OnVal, Off, OffVal, Opts) ->
 -define(MAX_ARGUMENTS, 255).
 
 %% The error and warning info structures, {Location,Module,Descriptor},
-%% are kept in their seperate fields in the lint state record together
+%% are kept in their separate fields in the lint state record together
 %% with the name of the file (when a new file is entered, marked by
 %% the 'file' attribute, then the field 'file' of the lint record is
 %% set). At the end of the run these lists are packed into a list of
@@ -130,7 +130,7 @@ value_option(Flag, Default, On, OnVal, Off, OffVal, Opts) ->
                    :: gb_sets:set(fa()),
                no_auto=gb_sets:empty() %Functions explicitly not autoimported
                    :: gb_sets:set(fa()) | 'all',
-               defined=gb_sets:empty()          %Defined fuctions
+               defined=gb_sets:empty()          %Defined functions
                    :: gb_sets:set(fa()),
 	       on_load=[] :: [fa()],		%On-load function
 	       on_load_anno=erl_anno:new(0)	%Location for on_load
@@ -402,7 +402,7 @@ format_error({ill_defined_optional_callbacks,Behaviour}) ->
     io_lib:format("behaviour ~w optional callback functions erroneously defined",
 		  [Behaviour]);
 format_error({behaviour_info, {_M,F,A}}) ->
-    io_lib:format("cannot define callback attibute for ~tw/~w when "
+    io_lib:format("cannot define callback attribute for ~tw/~w when "
                   "behaviour_info is defined",[F,A]);
 format_error({redefine_optional_callback, {F, A}}) ->
     io_lib:format("optional callback ~tw/~w duplicated", [F, A]);
@@ -4395,7 +4395,7 @@ is_autoimport_suppressed(NoAutoSet,{Func,Arity}) ->
 bif_clash_specifically_disabled(St,{F,A}) ->
     lists:member({F,A},St#lint.nowarn_bif_clash).
 
-%% Predicate to find out if an autoimported guard_bif is not overriden in some way
+%% Predicate to find out if an autoimported guard_bif is not overridden in some way
 %% Guard Bif without module name is disallowed if
 %% * It is overridden by local function
 %% * It is overridden by -import and that import is not of itself (i.e. from module erlang)
